@@ -11,10 +11,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DriverManager {
-	public static WebDriver driver;
+	public static WebDriver driver=null;
 	
-	
-	 Actions action = new Actions(driver);
 	// Actions actionChain = new ActionChain(driver);
 	
 	public static WebDriver getDriver() {
@@ -33,8 +31,7 @@ public class DriverManager {
 			driver.quit();
 			driver=null;
 		}
-		
 	}
-	
-	
 }
+
+
