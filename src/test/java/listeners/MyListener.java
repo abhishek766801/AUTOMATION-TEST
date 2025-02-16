@@ -10,6 +10,7 @@ public class MyListener implements ITestListener{
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestStart(result);
+		
 	}
 
 	@Override

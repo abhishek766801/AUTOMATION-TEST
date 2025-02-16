@@ -14,7 +14,7 @@ public class LoginPage extends DriverManager{
     @FindBy(id = "userName")
     private WebElement usernameField;
  
-    @FindBy(id = "password")
+    @FindBy(id = "passwordt")
     private WebElement passwordField;
  
     @FindBy(id = "submit")
