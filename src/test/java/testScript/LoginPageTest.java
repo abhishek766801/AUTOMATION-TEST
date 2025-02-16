@@ -6,9 +6,7 @@ import driver.DriverManager;
 import pageObjects.LoginPage;
 public class LoginPageTest {
 
-	
-	DriverManager dr=new DriverManager();
-	WebDriver driver=dr.getDriver();
+	WebDriver driver=DriverManager.getDriver();
 	LoginPage loginPage=new LoginPage(driver);
 
 	@Test()

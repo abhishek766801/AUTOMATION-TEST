@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
- 
-public class LoginPage {
- 
+import driver.DriverManager;
+public class LoginPage extends DriverManager{
+	DriverManager driverManager;
     WebDriver driver;
  
     // Locators using @FindBy annotation
@@ -22,21 +22,22 @@ public class LoginPage {
  
     // Constructor
    
-    public LoginPage(WebDriver driver2) {this.driver = driver;
+    public LoginPage(WebDriver driver) {this.driver = driver;
+    
     PageFactory.initElements(driver, this);// TODO Auto-generated constructor stub
 	}
 
 	// Actions
     public void enterUsername(String username) {
-        usernameField.sendKeys(username);
+    	waitForElement(usernameField).sendKeys(username);
     }
  
     public void enterPassword(String password) {
-        passwordField.sendKeys(password);
+    	waitForElement(passwordField).sendKeys(password);
     }
  
     public void clickLogin() {
-loginButton.click();
+    		waitForElementToBeClickable(loginButton).click();
     }
  
     public void login(String username, String password) {

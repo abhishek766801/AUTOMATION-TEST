@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Feb 16 18:58:46 IST 2025</td>
+<td>Started on:</td><td>Sun Feb 16 20:03:31 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1423 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1205 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,22 +77,16 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testScript.LoginPageTest.login()'><b>login</b><br>Test class: testScript.LoginPageTest</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.sendKeys(Unknown Source)
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;driver.DriverManager.waitForElement(org.openqa.selenium.WebElement)&quot; because &quot;this.driverManager&quot; is null
 	at pageObjects.LoginPage.enterUsername(LoginPage.java:31)
 	at pageObjects.LoginPage.login(LoginPage.java:43)
-	at testScript.LoginPageTest.login(LoginPageTest.java:17)
+	at testScript.LoginPageTest.login(LoginPageTest.java:15)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1491522744", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1491522744'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.sendKeys(Unknown Source)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2086068243", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2086068243'><pre>java.lang.NullPointerException: Cannot invoke &quot;driver.DriverManager.waitForElement(org.openqa.selenium.WebElement)&quot; because &quot;this.driverManager&quot; is null
 	at pageObjects.LoginPage.enterUsername(LoginPage.java:31)
 	at pageObjects.LoginPage.login(LoginPage.java:43)
-	at testScript.LoginPageTest.login(LoginPageTest.java:17)
+	at testScript.LoginPageTest.login(LoginPageTest.java:15)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -121,7 +115,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>1</td>
-<td>testScript.LoginPageTest@6f0b0a5e</td></tr>
+<td>testScript.LoginPageTest@1bb564e2</td></tr>
 </table><p>
 </body>
 </html>

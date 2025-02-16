@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DriverManager {
 	public static WebDriver driver=null;
-	
+	public static WebDriverWait wait;
 	// Actions actionChain = new ActionChain(driver);
 	
 	public static WebDriver getDriver() {
@@ -20,7 +20,7 @@ public class DriverManager {
 			driver=new ChromeDriver();
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			
+			wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		}
 		return driver;
 		
@@ -32,6 +32,16 @@ public class DriverManager {
 			driver=null;
 		}
 	}
+	
+	 // Wait for visibility of an element
+    public WebElement waitForElement(WebElement element) {
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+ 
+    // Wait for an element to be clickable
+    public WebElement waitForElementToBeClickable(WebElement element) {
+        return wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
 }
 
 
