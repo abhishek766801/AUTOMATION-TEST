@@ -10,13 +10,13 @@ public class LoginPageTest {
 	LoginPage loginPage=new LoginPage(driver);
 	@Test(priority=1)
 	public void getURL() {
-		driver.get("https://oipa-qa.assurant.nonprod.manage.equisoft.com:8020/PASJava/");
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		
 	}
 
 	@Test(priority=2)
 	public void login() {
-		loginPage.login("AKumar","KumarAQA");
+		loginPage.login("Admin","admin123");
 	}
 
 }

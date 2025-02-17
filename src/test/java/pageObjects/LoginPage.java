@@ -11,13 +11,16 @@ public class LoginPage extends DriverManager{
     WebDriver driver;
  
     // Locators using @FindBy annotation
-    @FindBy(id = "userName")
+    @FindBy(name = "username")
     private WebElement usernameField;
- 
-    @FindBy(id = "passwordt")
+    
+   
+    
+    @FindBy(name="password")
     private WebElement passwordField;
- 
-    @FindBy(id = "submit")
+    
+    		
+    @FindBy(tagName = "button")
     private WebElement loginButton;
  
     // Constructor
