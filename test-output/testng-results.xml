@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-17T21:36:33 IST" name="Suite" finished-at="2025-02-17T21:36:36 IST" duration-ms="2662">
+  <suite started-at="2025-02-20T12:35:59 IST" name="Suite" finished-at="2025-02-20T12:36:02 IST" duration-ms="2832">
     <groups>
     </groups>
-    <test started-at="2025-02-17T21:36:33 IST" name="Test" finished-at="2025-02-17T21:36:36 IST" duration-ms="2662">
+    <test started-at="2025-02-20T12:35:59 IST" name="Test" finished-at="2025-02-20T12:36:02 IST" duration-ms="2832">
       <class name="testScript.LoginPageTest">
-        <test-method signature="getURL()[pri:1, instance:testScript.LoginPageTest@7b8233cd]" started-at="2025-02-17T21:36:34 IST" name="getURL" finished-at="2025-02-17T21:36:35 IST" duration-ms="976" status="PASS">
+        <test-method signature="getURL()[pri:1, instance:testScript.LoginPageTest@1cbf6e72]" started-at="2025-02-20T12:35:59 IST" name="getURL" finished-at="2025-02-20T12:36:00 IST" duration-ms="644" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getURL -->
-        <test-method signature="login()[pri:2, instance:testScript.LoginPageTest@7b8233cd]" started-at="2025-02-17T21:36:35 IST" name="login" finished-at="2025-02-17T21:36:36 IST" duration-ms="1232" status="PASS">
+        <test-method signature="login()[pri:0, instance:testScript.LoginPageTest@1cbf6e72]" started-at="2025-02-20T12:36:00 IST" name="login" finished-at="2025-02-20T12:36:02 IST" depends-on-methods="testScript.LoginPageTest.getURL" duration-ms="1771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->

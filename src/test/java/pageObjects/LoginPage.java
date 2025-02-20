@@ -25,9 +25,9 @@ public class LoginPage extends DriverManager{
  
     // Constructor
    
-    public LoginPage(WebDriver driver) {this.driver = driver;
-    
-    PageFactory.initElements(driver, this);// TODO Auto-generated constructor stub
+    public LoginPage(WebDriver driver) {
+    	this.driver = driver;
+    	PageFactory.initElements(driver, this);// TODO Auto-generated constructor stub
 	}
 
 	// Actions
