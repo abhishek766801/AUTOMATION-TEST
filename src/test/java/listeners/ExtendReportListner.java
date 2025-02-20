@@ -5,6 +5,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import driver.DriverManager;
+import reports.ExtentReportManager;
+
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
  
 import com.aventstack.extentreports.ExtentReports;
@@ -17,46 +19,40 @@ public class ExtendReportListner implements ITestListener{
 	 private static ExtentReports extent;
 	    private static ExtentTest test;
 	 
-	    // Initialize the Extent Report
+	    @Override
 	    public void onStart(ITestContext context) {
-	        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("test-output/ExtentReport.html");
-	        htmlReporter.config().setDocumentTitle("Automation Report");
-	        htmlReporter.config().setReportName("Selenium Test Report");
-	        htmlReporter.config().setTheme(Theme.STANDARD);
-	 
-	        extent = new ExtentReports();
-	        extent.attachReporter(htmlReporter);
+	        ExtentReportManager.getInstance();
 	    }
 	 
-	    // Start a new test entry
+	    @Override
 	    public void onTestStart(ITestResult result) {
-	        test = extent.createTest(result.getMethod().getMethodName());
+	        ExtentReportManager.createTest(result.getMethod().getMethodName());
 	    }
 	 
-	    // Log pass status
+	    @Override
 	    public void onTestSuccess(ITestResult result) {
-	        test.log(Status.PASS, "Test Passed: " + result.getMethod().getMethodName());
+	        ExtentReportManager.getTest().log(Status.PASS, "Test Passed");
 	    }
 	 
-	    // Log failure and attach screenshot
+	    @Override
 	    public void onTestFailure(ITestResult result) {
-	        test.log(Status.FAIL, "Test Failed: " + result.getMethod().getMethodName());
-	        test.log(Status.FAIL, result.getThrowable());
-	 
-	        // Capture screenshot on failure
+	        ExtentReportManager.getTest().log(Status.FAIL, "Test Failed: " + result.getThrowable());
 	        WebDriver driver = DriverManager.getDriver();
-	       String screenshotPath = DriverManager.captureScreenshot(driver, result.getMethod().getMethodName());
-	       // test.addScreenCaptureFromPath(screenshotPath);
+		       String screenshotPath = DriverManager.captureScreenshot(driver, result.getMethod().getMethodName());
+		      
 	    }
 	 
-	    // Log skipped test
+	    @Override
 	    public void onTestSkipped(ITestResult result) {
-	        test.log(Status.SKIP, "Test Skipped: " + result.getMethod().getMethodName());
+	        ExtentReportManager.getTest().log(Status.SKIP, "Test Skipped");
 	    }
 	 
-	    // Generate report after tests
+	    @Override
 	    public void onFinish(ITestContext context) {
-	        extent.flush();
+	        ExtentReportManager.flushReport();
+	    
 	    }
+	 
+	    // Log failure and attach 
 
 }
