@@ -6,6 +6,7 @@
       <class name="testScript.LoginPageTest">
         <methods>
           <include name="login"/>
+          <include name="getURL"/>
         </methods>
       </class> <!-- testScript.LoginPageTest -->
     </classes>

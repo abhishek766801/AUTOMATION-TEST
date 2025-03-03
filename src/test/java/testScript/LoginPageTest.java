@@ -1,6 +1,12 @@
 package testScript;
 
+import java.time.Duration;
+import java.time.temporal.TemporalUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.locators.RelativeLocator;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -22,6 +28,8 @@ public class LoginPageTest {
 	public void login() {
 		loginPage.login("Admin","admin123");
 		ExtentReportManager.testReport(Status.PASS,"login triggered");
+		WebElement ele=driver.findElement(By.cssSelector(".oxd-grid-item"));
+		//By passwordLocator = RelativeLocator.with(By.tagName("input")).below(By.id("email"));
 	}
 
 }
